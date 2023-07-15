@@ -6,7 +6,8 @@ from mongoengine import connect, Document, StringField, BooleanField
 
 
 # Підключення до бази даних MongoDB
-connect('hw8', host='uri = "mongodb+srv://NickoSuerte:<password>@cluster0.tquscaz.mongodb.net/?retryWrites=true&w=majority"')
+connect(
+    host=f"""mongodb+srv://NickoSuerte:Nick1987Burjuy@cluster0.tquscaz.mongodb.net/hw8?retryWrites=true&w=majority""", ssl=True)
 
 
 class Contact(Document):
